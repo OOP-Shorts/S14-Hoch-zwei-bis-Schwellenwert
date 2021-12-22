@@ -8,7 +8,17 @@ public class TimesPowerByTwo {
         überschreitet.
     */
     public static int intTimesPowerBy2BelowThreshold(int i, int threshold) {
-        return 0;
+        int times = 0;
+        int curr = i;
+
+        while(curr <= threshold) {
+            // hoch 2 entspricht Multiplikation mit sich selbst.
+            curr *= curr;
+            // In jedem hoch 2 Durchgang wird der Zähler um 1 inkrementiert.
+            times++;
+        }
+
+        return times;
     }
 
     public static void main(String[] args) {
